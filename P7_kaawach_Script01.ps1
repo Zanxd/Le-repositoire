@@ -4,7 +4,19 @@
 function IsCredentialValid($Password)
 {
     $PWPolicy = Get-ADDefaultDomainPasswordPolicy
-        $PassedEntries =    @(        $Password -cmatch "[a-z]"        $Password -cmatch "[A-Z]"        $Password -cmatch "[0-9]"        $Password -cmatch "[^a-zA-Z0-9]"    ).Where{$_}.Count    if($Password.Length -lt $PWPolicy.MinPasswordLength -or $PassedEntries -lt 4)    {        return $false    }
+    
+    $PassedEntries =
+    @(
+        $Password -cmatch "[a-z]"
+        $Password -cmatch "[A-Z]"
+        $Password -cmatch "[0-9]"
+        $Password -cmatch "[^a-zA-Z0-9]"
+    ).Where{$_}.Count
+
+    if($Password.Length -lt $PWPolicy.MinPasswordLength -or $PassedEntries -lt 4)
+    {
+        return $false
+    }
 
     $true
 }
@@ -23,7 +35,7 @@ while($ans -notmatch "[oO]" -or $cvalid -ne $true)
     $name = New-Object string[] 2
 
 
-    # Réitière l'input si la string est vide ou contient autre chose que des lettres
+    # Réitère l'input si la string est vide ou contient autre chose que des lettres
     while($name[0] -notmatch "\S" -or $name[0] -notmatch "[a-z]")
     {
         # Input pour le prénom
@@ -36,7 +48,7 @@ while($ans -notmatch "[oO]" -or $cvalid -ne $true)
         $name[1] = Read-Host "Veuillez entrer le nom de l'utilisateur"
     }
 
-    # Réitière l'input si la string est vide
+    # Réitère l'input si la string est vide, si elle ne contient pas de chiffres ou qu'elle ne contient pas 10 caractères
     while($phone -notmatch "\S" -or $phone -notmatch "[0-9]" -or $phone.Length -lt 10)
     {
         # Input pour le numéro de téléphone

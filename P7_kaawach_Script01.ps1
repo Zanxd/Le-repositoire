@@ -1,10 +1,21 @@
-﻿Import-Module ActiveDirectory
+﻿<#
+.SYNOPSIS
+Crée un nouvel utilisateur AD ainsi qu'un dossier partagé à son nom.
+.DESCRIPTION
+Documentation : https://github.com/Zanxd/Le-repositoire
+Script créé le 10/10/2021 / Auteur : Majid KAAWACH / Version 1.1 (Groupe ACME)
+#>
+
+# Importation du module Active Directory
+Import-Module ActiveDirectory
 
 # Fonction qui vérifie si le mot de passe répond aux exigences de complexité (retourne un booléen $true ou $false)
 function IsCredentialValid($Password)
 {
+    # Récupère la police du domaine dans une variable 
     $PWPolicy = Get-ADDefaultDomainPasswordPolicy
     
+    # Incrémente la variable à chaque couche de vérification passée
     $PassedEntries =
     @(
         $Password -cmatch "[a-z]"
@@ -13,6 +24,7 @@ function IsCredentialValid($Password)
         $Password -cmatch "[^a-zA-Z0-9]"
     ).Where{$_}.Count
 
+    # Retourne $false si le mot de passe est plus court qu'exigé par la police ou qu'il ne passe pas les 4 vérifications
     if($Password.Length -lt $PWPolicy.MinPasswordLength -or $PassedEntries -lt 4)
     {
         return $false
@@ -98,7 +110,7 @@ try
     # Mise en forme du nom complet
     $name = $name[1].ToUpper() + " " + $name[0].SubString(0,1).ToUpper() + $name[0].SubString(1).ToLower()
 
-    # On crée l'utilisateur ainsi qu'un dossier partagé à son nom
+    # On crée l'utilisateur ainsi qu'un dossier partagé à son nom en lui octroyant les droits complets
     New-ADUser -Name $name -SamAccountName $clogin -UserPrincipalName $clogin@acme.fr -EmailAddress $email -OfficePhone $phone -AccountPassword $c.Password -PasswordNeverExpires $true -Enabled $true
     New-Item -Path "c:\Personnel\" -Name $name -ItemType "directory"
     New-SmbShare -Name $name -Path "c:\Personnel\$name" -FullAccess "ACME\$clogin"

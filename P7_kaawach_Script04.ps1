@@ -1,4 +1,12 @@
-﻿# Masque certaines erreurs durant la copie (accès refusés)
+﻿<#
+.SYNOPSIS
+Sauvegarde les données contenues dans "C:\Users" sur le serveur dans "C:\SAV$".
+.DESCRIPTION
+Documentation : https://github.com/Zanxd/Le-repositoire
+Script créé le 10/10/2021 / Auteur : Majid KAAWACH / Version 1.1 (Groupe ACME)
+#>
+
+# Masque certaines erreurs durant la copie (accès refusés)
 $ErrorActionPreference = 'SilentlyContinue'
 
 # On récuppère la date et l'heure

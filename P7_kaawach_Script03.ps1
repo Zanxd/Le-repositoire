@@ -1,6 +1,6 @@
 ﻿<#
 .SYNOPSIS
-Permet lister les groupes auxquels un utilisateur fait partie et d'exporter cette liste dans un fichier .txt à la racine.
+Permet de lister les groupes auxquels un utilisateur fait partie et d'exporter cette liste dans un fichier .txt à la racine.
 .DESCRIPTION
 Documentation : https://github.com/Zanxd/Le-repositoire
 Script créé le 10/10/2021 / Auteur : Majid KAAWACH / Version 1.1 (Groupe ACME)

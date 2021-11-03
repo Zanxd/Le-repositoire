@@ -18,11 +18,11 @@ $u = "$d$($env:COMPUTERNAME)_$($env:USERNAME)"
 # Chemin des logs
 $logpath = "\\SRVACMEPAR01\SAV$\Logs$\"
 
-# On lance un transcript qui fera un rapport dans le dossier des logs, puis on démarre la copie
+# On lance un transcript qui fera un rapport dans le dossier des logs, on crée le dossier de destination, puis on démarre la copie
 Start-Transcript -OutputDirectory $logpath
 New-Item -Path \\SRVACMEPAR01\SAV$\$u -ItemType Directory
 Copy-Item -Path C:\Users\$env:USERNAME\ -Destination \\SRVACMEPAR01\SAV$\$u -Recurse -verbose
-Stop-Transcript
+Stop-Transcript # Fin du rapport
 
 # On récuppère le dernier fichier créé dans le dossier logs
 $logfile = Get-ChildItem -Attributes !Directory -Path $logpath | Sort-Object -Descending -Property LastWriteTime | select -First 1
@@ -33,9 +33,8 @@ if($?)
     Add-Content -Path $logfile.PSPath -Value "[V] Les fichiers ont été copiés avec succès."
 }
 
+# Sinon on renvoie un message d'erreur
 else
 {
     Add-Content -Path $logpath.PSPath -Value "[!] Une erreur s'est produite."
 }
-
-Start-Sleep -s 10

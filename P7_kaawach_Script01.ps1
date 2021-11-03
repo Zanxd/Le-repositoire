@@ -13,7 +13,7 @@ Import-Module ActiveDirectory
 function IsCredentialValid($Password)
 {
     # Récupère la police du domaine dans une variable 
-    $PWPolicy = Get-ADDefaultDomainPasswordPolicy
+    $PWPolicy = Get-ADDefaultDomainPasswordPolicy #PW = PassWord
     
     # Incrémente la variable à chaque couche de vérification passée
     $PassedEntries =
@@ -29,13 +29,14 @@ function IsCredentialValid($Password)
     {
         return $false
     }
-
+    
+    # Retoune $true si les exigences de complexité ont bien été respectées
     $true
 }
 
 
 # Boucle qui demande d'entrer les informations (réitérée si la confirmation est négative à la fin de l'instruction)
-while($ans -notmatch "[oO]" -or $cvalid -ne $true)
+while($ans -notmatch "[oO]" -or $cvalid -ne $true) #ans = answer = réponse
 {
     # On réinitialise la variable en cas de réitération
     if($c -ne $null)
@@ -116,7 +117,6 @@ try
     New-SmbShare -Name $name -Path "c:\Personnel\$name" -FullAccess "ACME\$clogin"
 
     echo "L'utilisateur a bien été créé !"
-    Start-Sleep -s 5
 }
 
 # En cas d'erreur on affiche un message
@@ -124,5 +124,6 @@ catch
 {
     "Une erreur s'est produite."
     echo $Error[0]
-    Start-Sleep -s 5
 }
+
+Read-Host -Prompt "Appuyez sur la touche ENTREE pour quitter." 

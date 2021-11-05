@@ -12,11 +12,16 @@ Ce dernier script permet de copier les données du poste utilisateur (C:\Users) 
 ## Utilisation
 
 #### Copie
-![](https://i.imgur.com/tZmjUYy.png)Le script débutera la copie à l’exécution et affichera le message (en blanc) lorsque la copie sera finie.
+![](https://i.imgur.com/tZmjUYy.png)
+
+Le script débutera la copie à l’exécution et affichera le message (en blanc) lorsque la copie sera finie.
 
 #### Résultat
 
 ![](https://i.imgur.com/uU3venv.png)Le dossier a bien été créé. 
+
 *Le nom correspond à [Date-Heure]ORDINATEUR_NomUtilisateur*
 
-![](https://imgur.com/ry8iNsc.png)Et le transcript a bien été enregistré dans le fichier avec le message témoignant du résultat de la copie.
+![](https://imgur.com/ry8iNsc.png)
+
+Et le transcript a bien été enregistré dans le fichier avec le message témoignant du résultat de la copie.

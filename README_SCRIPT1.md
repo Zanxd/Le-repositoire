@@ -24,6 +24,7 @@ Ce premier script permet de créer en quelques étapes un **nouvel utilisateur**
 Un processus de saisie des informations débutera à l’exécution du script.
 #### Prénom
 ![](https://imgur.com/i7RCFdF.png)
+
 Le script vous demandera en premier lieu d'entrer le **prénom de l'utilisateur** à créer dans la fenêtre PowerShell, en confirmant à l'aide de la touche entrée.
 
 #### Nom

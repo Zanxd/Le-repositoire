@@ -18,8 +18,9 @@ Le script débutera la copie à l’exécution et affichera le message (en blanc
 
 #### Résultat
 
-![](https://i.imgur.com/uU3venv.png)Le dossier a bien été créé. 
+![](https://i.imgur.com/uU3venv.png)
 
+Le dossier a bien été créé. 
 *Le nom correspond à [Date-Heure]ORDINATEUR_NomUtilisateur*
 
 ![](https://imgur.com/ry8iNsc.png)

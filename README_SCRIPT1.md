@@ -23,30 +23,31 @@ Ce premier script permet de créer en quelques étapes un **nouvel utilisateur**
 ## Utilisation
 Un processus de saisie des informations débutera à l’exécution du script.
 #### Prénom
-![enter image description heresdq](https://imgur.com/i7RCFdF.png)
+![](https://imgur.com/i7RCFdF.png)
 Le script vous demandera en premier lieu d'entrer le **prénom de l'utilisateur** à créer dans la fenêtre PowerShell, en confirmant à l'aide de la touche entrée.
 
 #### Nom
-![enter image description here](https://imgur.com/4QfwIo9.png)
+![](https://imgur.com/4QfwIo9.png)
 Ensuite il vous demandera d'entrer son **nom de famille**.
 
 #### Téléphone
-![enter image description here](https://imgur.com/DChKEEI.png)
+![](https://imgur.com/DChKEEI.png)
 Puis le **numéro de téléphone**.
 
 #### Identifiants
-![enter image description here](https://imgur.com/W4x9qf8.png)
+![](https://imgur.com/W4x9qf8.png)
 Une fois le numéro saisi, une fenêtre s'ouvrira et vous demandera de **saisir les identifiants** désirés (un nom d'utilisateur est automatiquement suggéré par le script).
 **Rappel** : Le mot de passe **doit respecter** les exigences de sécurité (minimum une minuscule, une majuscule, un chiffre, un caractère spécial et doit comporter au moins 7 caractères au total).
 
 #### Confirmation
-![enter image description here](https://imgur.com/0s3Hf07.png)
+![](https://imgur.com/0s3Hf07.png)
 Le script vous demandera enfin de confirmer ces informations en saisissant la lettre "**O**".
 Si vous répondez par "**N**" vous recommencerez le processus de saisie des informations depuis le début.
 
 #### Résultat
 
-![](https://imgur.com/MkHGxBu.png)L’utilisateur AD créé avec les informations saisies.
+![](https://imgur.com/MkHGxBu.png)
+L’utilisateur AD créé avec les informations saisies.
 
 ![](https://imgur.com/j9i0TOF.png)
 ![](https://imgur.com/Rfw4vfa.png)

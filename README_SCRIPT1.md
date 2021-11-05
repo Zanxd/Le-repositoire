@@ -52,10 +52,12 @@ Si vous répondez par "**N**" vous recommencerez le processus de saisie des info
 #### Résultat
 
 ![](https://imgur.com/MkHGxBu.png)
+
 L’utilisateur AD créé avec les informations saisies.
 
 ![](https://imgur.com/j9i0TOF.png)
 ![](https://imgur.com/Rfw4vfa.png)
+
 Le dossier partagé créé à son nom (avec octroiement des droits d'accès complets).
 
 ## Explication technique

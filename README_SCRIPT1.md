@@ -29,19 +29,23 @@ Le script vous demandera en premier lieu d'entrer le **prénom de l'utilisateur*
 
 #### Nom
 ![](https://imgur.com/4QfwIo9.png)
+
 Ensuite il vous demandera d'entrer son **nom de famille**.
 
 #### Téléphone
 ![](https://imgur.com/DChKEEI.png)
+
 Puis le **numéro de téléphone**.
 
 #### Identifiants
 ![](https://imgur.com/W4x9qf8.png)
+
 Une fois le numéro saisi, une fenêtre s'ouvrira et vous demandera de **saisir les identifiants** désirés (un nom d'utilisateur est automatiquement suggéré par le script).
 **Rappel** : Le mot de passe **doit respecter** les exigences de sécurité (minimum une minuscule, une majuscule, un chiffre, un caractère spécial et doit comporter au moins 7 caractères au total).
 
 #### Confirmation
 ![](https://imgur.com/0s3Hf07.png)
+
 Le script vous demandera enfin de confirmer ces informations en saisissant la lettre "**O**".
 Si vous répondez par "**N**" vous recommencerez le processus de saisie des informations depuis le début.
 

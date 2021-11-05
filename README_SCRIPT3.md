@@ -15,11 +15,17 @@ Une fois la liste affichée, le script l'exporte automatiquement dans un fichier
 ## Utilisation
 
 #### Nom
-![](https://i.imgur.com/rOTaYYz.png)Le script vous demandera d'entrer le nom de l'utilisateur.
+![](https://i.imgur.com/rOTaYYz.png)
+
+Le script vous demandera d'entrer le nom de l'utilisateur.
 
 #### Liste
-![](https://i.imgur.com/sOu00GO.png)Puis il vous affichera la liste des groupes auxquels l'utilisateur appartient.
+![](https://i.imgur.com/sOu00GO.png)
+
+Puis il vous affichera la liste des groupes auxquels l'utilisateur appartient.
 Il vous informera également que la liste a été exportée dans un fichier .txt situé a la racine.
 
 #### Exportation
-![](https://i.imgur.com/yv7xxmU.png)La liste exportée après l’exécution du script.
+![](https://i.imgur.com/yv7xxmU.png)
+
+La liste exportée après l’exécution du script.
